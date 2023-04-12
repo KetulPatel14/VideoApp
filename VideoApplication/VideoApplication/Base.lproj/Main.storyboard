@@ -85,6 +85,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2vn-xQ-QxN"/>
                     </view>
+                    <connections>
+                        <outlet property="myVideoView" destination="vZt-Ib-foW" id="UpJ-vr-1Ft"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HoS-t8-VN2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -12,10 +12,25 @@ import AVKit
 
 class VideoViewController: UIViewController {
 
+    @IBOutlet weak var myVideoView: UIView!
+    var player: AVPlayer!
+    var avpController = AVPlayerViewController()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        startVideo()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func startVideo(){
+        let url = URL(string: "")
+        player = AVPlayer(url: url!)
+        avpController.player = player
+        avpController.view.frame = myVideoView.bounds
+        self.myVideoView.addSubview(avpController.view)
+        player.play()
     }
 
     override func didReceiveMemoryWarning() {
